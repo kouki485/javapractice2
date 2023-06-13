@@ -20,6 +20,8 @@ nav {
     margin: 20px auto;
     align-items: center;
     font-weight: 550; 
+    position: sticky;
+    z-index: 1;
 }
 
 .nav-links {
@@ -71,11 +73,12 @@ nav {
     width: 1000px;
     height: 1000px;
     position: absolute;
-    background: #ccc;
+    /* background: #ccc; */
     border-radius: 50%;
     top: 0;
     left: 0;
     transform: rotate(0deg);
+    transition: 1s;
 }
 
 .feature{
@@ -104,16 +107,19 @@ nav {
 .two {
     top: 100px;
     left:340px;
+    transform: rotate(-90deg);
 }
 
 .three {
     bottom: 450px;
     left:50px;
+    transform: rotate(-180deg);
 }
 
 .four {
     bottom: 150px;
     right: 370px;
+    transform: rotate(-270deg);
 }
 
 .pc {
@@ -122,6 +128,7 @@ nav {
     top:50%;
     transform: translateY(-50%);
     left: 27%;
+    z-index: 1;
 }
 
 .control {
@@ -149,4 +156,13 @@ nav {
 #downBtn {
     cursor: pointer;
     transform: rotate(-180deg);
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    border-top: 520px solid #fff;
+    border-right: 520px solid transparent;
+    border-bottom: 520px solid #fff;
+    border-left: 520px solid #fff;
 }
